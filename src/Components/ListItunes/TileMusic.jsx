@@ -28,7 +28,7 @@ function TileMusic({
                 </div>
             </div>
             <div className="px-1 py-4 sm:px-6 flex justify-center">
-                <audio className="w-full">
+                <audio controls className="w-full">
                     <source src={previewUrl} />
                     Your browser does not support the
                     <code>audio</code> element.
