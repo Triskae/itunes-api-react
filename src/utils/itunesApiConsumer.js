@@ -7,10 +7,10 @@ async function fetchItunes(searchValue) {
         const params = {
             method: 'GET',
             headers: headers,
-            mode: 'cors',
+            mode: 'no-cors',
             cache: 'default',
         };
-        const result = await fetch(`https://test.cors.workers.dev/https://itunes.apple.com/search?term=${searchValue}&country=FR&media=music`, params);
+        const result = await fetch(`http://alloworigin.com/get?url=https://itunes.apple.com/search?term=${searchValue}&country=FR&media=music`, params);
         return await result.json();
     }
 }
