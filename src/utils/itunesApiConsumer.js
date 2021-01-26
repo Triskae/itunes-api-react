@@ -1,6 +1,13 @@
-async function fetchItunes (searchValue) {
+async function fetchItunes(searchValue) {
     if (searchValue) {
-        const result = await fetch(`https://itunes.apple.com/search?term=${searchValue}`);
+        const headers = new Headers();
+        const params = {
+            method: 'GET',
+            headers: headers,
+            mode: 'cors',
+            cache: 'default'
+        };
+        const result = await fetch(`https://itunes.apple.com/search?term=${searchValue}`, params);
         return await result.json();
     }
 }
