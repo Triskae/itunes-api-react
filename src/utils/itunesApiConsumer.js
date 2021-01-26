@@ -4,7 +4,7 @@ async function fetchItunes(searchValue) {
         const params = {
             method: 'GET',
             headers: headers,
-            cors: 'cors',
+            mode: 'cors',
             cache: 'default',
             credentials: 'include',
         };
