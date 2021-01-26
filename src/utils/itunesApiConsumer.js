@@ -1,6 +1,9 @@
 async function fetchItunes(searchValue) {
     if (searchValue) {
-        const headers = new Headers();
+        const headers = new Headers({
+            'Access-Control-Allow-Origin': '*',
+            "Content-Type": "application/json"
+        });
         const params = {
             method: 'GET',
             headers: headers,
@@ -8,7 +11,7 @@ async function fetchItunes(searchValue) {
             cache: 'default',
             credentials: 'include',
         };
-        const result = await fetch(`https://itunes.apple.com/search?term=${searchValue}&country=FR`, params);
+        const result = await fetch(`https://itunes.apple.com/search?term=${searchValue}&country=FR&media=music`, params);
         return await result.json();
     }
 }
