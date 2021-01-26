@@ -7,7 +7,7 @@ async function fetchItunes(searchValue) {
         const params = {
             method: 'GET',
             headers: headers,
-            mode: 'no-cors',
+            mode: 'cors',
             cache: 'default',
         };
         const result = await fetch(`https://itunes.apple.com/search?term=${searchValue}&country=FR&media=music`, params);
