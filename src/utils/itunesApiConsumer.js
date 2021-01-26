@@ -5,7 +5,8 @@ async function fetchItunes(searchValue) {
             method: 'GET',
             headers: headers,
             mode: 'cors',
-            cache: 'default'
+            cache: 'default',
+            credentials: 'include',
         };
         const result = await fetch(`https://itunes.apple.com/search?term=${searchValue}`, params);
         return await result.json();

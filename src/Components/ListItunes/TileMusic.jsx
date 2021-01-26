@@ -5,7 +5,6 @@ function TileMusic({
     previewUrl,
     artworkUrl100,
 }) {
-    console.log(artistName)
     return (
         <div className="bg-white overflow-hidden shadow rounded-lg divide-y divide-gray-200">
             <div className="px-1 py-1 sm:px-6 font-bold">{trackName}</div>

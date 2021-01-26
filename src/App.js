@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, {useEffect, useState} from 'react'
 import './index.css'
-import { ListItunes } from './Components'
+import {ListItunes} from './Components'
 import fetchItunes from './utils/itunesApiConsumer'
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
     return (
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 z-50">
             <h1 className="text-indigo-500 text-2xl mt-3">iTunes</h1>
+            <span className="text-xs text-gray-700">Si jamais en tapant vous n'avez aucun résultat, c'est un soucis de CORS, j'ai cherché, mais j'ai pas trouvé comment résoudre définitivement ce problème, pour certaines artiste ça va fonctionner et d'autres non ...</span>
             <div className="flex h-10 mt-3">
                 <input
                     type="text"
@@ -42,7 +43,7 @@ function App() {
                 </button>
             </div>
             {response ? (
-                <ListItunes response={response} />
+                <ListItunes response={response}/>
             ) : (
                 <div className="flex justify-center">
                     <p className="mt-6">Aucun résulats</p>
