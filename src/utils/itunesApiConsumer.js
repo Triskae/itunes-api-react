@@ -9,9 +9,8 @@ async function fetchItunes(searchValue) {
             headers: headers,
             mode: 'cors',
             cache: 'default',
-            credentials: 'include',
         };
-        const result = await fetch(`https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?term=${searchValue}&country=FR&media=music`, params);
+        const result = await fetch(`https://test.cors.workers.dev/https://itunes.apple.com/search?term=${searchValue}&country=FR&media=music`, params);
         return await result.json();
     }
 }
