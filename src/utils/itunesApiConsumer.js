@@ -4,11 +4,11 @@ async function fetchItunes(searchValue) {
         const params = {
             method: 'GET',
             headers: headers,
-            mode: 'cors',
+            cors: 'cors',
             cache: 'default',
             credentials: 'include',
         };
-        const result = await fetch(`https://itunes.apple.com/search?term=${searchValue}`, params);
+        const result = await fetch(`https://itunes.apple.com/search?term=${searchValue}&country=FR`, params);
         return await result.json();
     }
 }

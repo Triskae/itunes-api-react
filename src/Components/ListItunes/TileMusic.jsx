@@ -1,3 +1,5 @@
+import CustomPlayer from "./CustomPlayer";
+
 function TileMusic({
     artistName,
     collectionName,
@@ -26,10 +28,12 @@ function TileMusic({
                 </div>
             </div>
             <div className="px-1 py-4 sm:px-6 flex justify-center">
-                <audio controls src={previewUrl} className="w-full">
+                <audio className="w-full">
+                    <source src={previewUrl} />
                     Your browser does not support the
                     <code>audio</code> element.
                 </audio>
+                <CustomPlayer/>
             </div>
         </div>
     )

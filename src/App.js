@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import './index.css'
 import {ListItunes} from './Components'
 import fetchItunes from './utils/itunesApiConsumer'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faPlay, faForward, faBackward, faStop} from "@fortawesome/free-solid-svg-icons";
 
 function App() {
     const [search, setSearch] = useState('')
